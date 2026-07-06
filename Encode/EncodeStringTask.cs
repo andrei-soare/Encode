@@ -17,6 +17,11 @@ public class EncodeStringTask
 
         for(int i = 1; i < input.Length; i++)
         {
+            if (Char.IsNumber(input[i-1])) 
+            {
+                encodedString.Append(input[i - 1]);
+                continue;
+            }
             if (input[i] == input[i - 1])
             {
                 count++;
